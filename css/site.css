@@ -136,13 +136,15 @@ main {
 }
 
 #appForm,
-#resultsTable {
+#totalResults,
+#paymentsResult {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#resultsTable {
+#totalResults,
+#paymentsResult {
     max-height: 400px;
     overflow-y: auto;
 }
