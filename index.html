@@ -53,7 +53,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#hero">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#app">The App</a>
@@ -62,14 +62,13 @@
                             <a class="nav-link" href="#code">The Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/brianley99/LoanSolutions"
-                                target="_blank">Repo</a>
+                            <a class="nav-link" href="https://github.com/brianley99/LoanSolutions" target="_blank">Repo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://bley-portfolio.netlify.app/" target="_blank">About</a>
                         </li>
                         <li class="nav-item">
-                            <!-- ADD LINK TO BLOG-->
+                            <!-- TODO: ADD LINK TO BLOG-->
                             <a class="nav-link" href="#" target="_blank">Blog</a>
                         </li>
                     </ul>
@@ -78,60 +77,75 @@
         </nav>
     </header>
 
-    <main class="container p-3">
-        <section id="home" class="hero">
-            <div class="row row-cols-1 row-cols-lg-2 g-3">
-                <div class="col d-flex justify-content-center mb-3">
-                    <img src="/img/Loan Solutions.svg" class="appLogo mx-auto w-100 rounded" />
+    <main>
+        <div id="hero" class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="/img/Loan Solutions.svg" class="d-block mx-lg-auto img-fluid rounded"
+                        alt="Loan Solutions Logo" width="700" height="500" loading="lazy">
                 </div>
-                <div class="col d-flex justify-content-center align-items-center">
-                    <div>
-                        <h1>Coding Challange</h1>
-                        <p class="lead mb-3">Loan Solutions is a website programmed with JavaScript to calculate loan
-                            payments based on a loan amount, interest, and term.</p>
-                        <a href="#app" class="btn btn-primary btn-lg">Try it out!</a>
-                        <a href="#code" class="btn btn-outline-dark btn-lg">View Code</a>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+                        Coding Challange</h1>
+                    <p class="lead">Loan Solutions is a dynamic web page programmed with JavaScript that calculates loan payments based on a loan amount, term, and interest rate.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="#app" class="btn btn-primary btn-lg px-4 me-md-2">Try it out!</a>
+                        <a href="#code" class="btn btn-outline-secondary btn-lg px-4">View Code</a>
                     </div>
-
                 </div>
             </div>
-        </section>
-        <hr>
-        <section id="about" class="mt-5">
-            <h3 class="fw-light">Build Using</h3>
-            <div class="techStack mb-2">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
+        </div>
+        <div class="section-divider"></div>
+        <div id="techStack" class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom">Tech Stack</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-md-2 row-cols-xl-4">
+                <div class="col d-flex align-items-start">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        class="mt-2 me-3" />
+                    <div>
+                        <h3 class="fs-2">JavaScript</h3>
+                        <p>I used JavaScript to create interactive elements, validate user input, and enhance user
+                            experience
+                            through dynamic
+                            content, and functionality.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                        class="mt-2 me-3" />
+                    <div>
+                        <h3 class="fs-2">Bootstrap</h3>
+                        <p>I used Bootstrap to create responsive and mobile-friendly design. Bootstrap provided a
+                            framework
+                            for creating consistent layouts, typography, and UI components.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                        class="mt-2 me-3" />
+                    <div>
+                        <h3 class="fs-2">HTML</h3>
+                        <p>I used HTML to organize text, images, and other
+                            media into a logical and accessible format for users.</p>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                        class="mt-2 me-3" />
+                    <div>
+                        <h3 class="fs-2">CSS</h3>
+                        <p>I used CSS to control the color, typography, and other design elements of HTML content to
+                            create
+                            visually
+                            appealing and consistent user interface.</p>
+                    </div>
+                </div>
             </div>
-            <ul class="checklist">
-                <li>
-                    <i class="bi bi-check-square-fill"></i>
-                    <span>CSS & Bootstrap Layout</span>
-                </li>
-                <li>
-                    <i class="bi bi-check-square-fill"></i>
-                    <span>JavaScript Fundamentals</span>
-                </li>
-                <li>
-                    <i class="bi bi-check-square-fill"></i>
-                    <span>JavaScript Loops</span>
-                </li>
-                <li>
-                    <i class="bi bi-check-square-fill"></i>
-                    <span>JavaScript DOM Manipulation</span>
-                </li>
-                <li>
-                    <i class="bi bi-check-square-fill"></i>
-                    <span>Boolean Logic</span>
-                </li>
-            </ul>
-        </section>
-        <hr>
-        <section id="app" class="mt-5">
-            <h3 class="fw-light">The App</h3>
-            <!-- Input Form -->
+        </div>
+        <div class="section-divider"></div>
+        <div id="app" class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom">The App</h2>
+
             <form id="appForm" action="#" class="bg-primary-subtle rounded p-3 mt-4 mb-2">
                 <div class="row row-cols-1 g-3">
                     <div class="col">
@@ -143,13 +157,15 @@
                     </div>
                     <div class="col-8">
                         <div class="form-floating">
-                            <input type="number" class="form-control" id="termValue" value="60" placeholder="Term">
+                            <input type="number" class="form-control" id="termValue" value="60"
+                                placeholder="Term">
                             <label for="termValue">Term</label>
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="form-floating">
-                            <input type="number" class="form-control" id="rateValue" value="5" placeholder="Interest">
+                            <input type="number" class="form-control" id="rateValue" value="5"
+                                placeholder="Term">
                             <label for="rateValue">Rate</label>
                         </div>
                     </div>
@@ -160,116 +176,273 @@
                     </div>
                 </div>
             </form>
-            <!-- Overall Result -->
-            <div id="totalResults" class=" d-none mt-3">
-                <div class="card border-primary p-2 pb-0 mb-0">
-                  <div class="card-body">
-                    <dl class="row row-cols-2 mb-0">
-                        <dt class="col text-muted">Monthly Payments</dt>
-                        <dd class="col text-end"><span id="monthlyPayments" class="fs-1"></span></dd>
-                        <dt class="col text-muted">Total Principal</dt>
-                        <dd class="col text-end"><span id="totalPrincipal" class="fs-6"></span></dd>
-                        <dt class="col text-muted">Total Interest</dt>
-                        <dd class="col text-end"><span id="totalInterest" class="fs-6"></span></dd>
-                        <dt class="col text-muted">Total Cost</dt>
-                        <dd class="col text-end"><span id="totalCost" class="fs-6"></span></dd>
-                    </dl>
-                  </div>
+            <div id="results" class="d-none alert alert-success shadow rounded p-4">
+                <!-- Overall Result -->
+                <div id="totalResults" class="mt-3">
+                    <div class="card bg-success-subtle border-success shadow-sm p-2 pb-0 mb-0">
+                        <div class="card-body">
+                            <dl class="row row-cols-2 mb-0">
+                                <dt class="col text-muted">Monthly Payments</dt>
+                                <dd class="col text-end"><span id="monthlyPayments" class="fw-bold fs-1"></span></dd>
+                                <dt class="col text-muted">Total Principal</dt>
+                                <dd class="col text-end"><span id="totalPrincipal" class="fs-6"></span></dd>
+                                <dt class="col text-muted">Total Interest</dt>
+                                <dd class="col text-end"><span id="totalInterest" class="fs-6"></span></dd>
+                                <dt class="col text-muted">Total Cost</dt>
+                                <dd class="col text-end"><span id="totalCost" class="fs-6"></span></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment Results -->
+                <div id="paymentsResult" class="table-responsive mt-3">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Payment</th>
+                                <th>Principal</th>
+                                <th>Interest</th>
+                                <th>Total Interest</th>
+                                <th>Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="loanTableBody">
+                            <!-- JavaScript loan Table Body-->
+                        </tbody>
+                        <template id="loanTableBodyTemplate">
+                            <tr>
+                                <td data-id="month"></td>
+                                <td data-id="payment"></td>
+                                <td data-id="principal"></td>
+                                <td data-id="interest"></td>
+                                <td data-id="totalInterest"></td>
+                                <td data-id="balance"></td>
+                            </tr>
+                        </template>
+                    </table>
                 </div>
             </div>
-            <!-- Payment Results -->
-            <div id="paymentsResult" class="table-responsive d-none mt-3">
-                <table class="table table-hover table-striped">
-                    <thead class="bg-primary-subtle">
-                        <tr>
-                            <th>Month</th>
-                            <th>Payment</th>
-                            <th>Principal</th>
-                            <th>Interest</th>
-                            <th>Total Interest</th>
-                            <th>Balance</th>
-                        </tr>
-                    </thead>
-                    <tbody id="loanTableBody">
-                        <!-- JavaScript loan Table Body-->
-                    </tbody>
-                    <template id="loanTableBodyTemplate">
-                        <tr>
-                            <td data-id="month"></td>
-                            <td data-id="payment"></td>
-                            <td data-id="principal"></td>
-                            <td data-id="interest"></td>
-                            <td data-id="totalInterest"></td>
-                            <td data-id="balance"></td>
-                        </tr>
-                    </template>
-                </table>
-            </div>
-        </section>
-        <hr>
-        <section id="code" class="mt-5">
-            <h3 class="fw-light">The Code</h3>
-            <!-- Overview -->
-            <h4 class="mt-3">Seperation of concerns</h4>
+        </div>
+        <div class="section-divider"></div>
+        <div id="code" class="container px-4 py-5">
+
+            <h2 class="pb-2 border-bottom">The Code</h2>
+            <h4 class="pt-2 mt-4">Seperation of concerns</h4>
             <p>The solution to this coding challange is split into three sections, each of which will addreress a
                 seperate
                 concern.</p>
             <dl class="row mb-0">
                 <dt class="col-md-3">Controller, Logic, View</dt>
-                <!-- ADD CONTROLLER, LOGIC, & VIEW FUNCTION DESCRIPTION -->
                 <dd class="col-md-9">
-                    <p>The <em>Controller</em> function is the entry point for the page, it's responsible for getting
+                    <p>The <em>Controller</em> function is the entry point for the page, it's responsible for
+                        getting
                         and validating the inputs as well as calling any other functions.</p>
                     <p>The <em>Logic</em> function Lorem ipsum dolor sit.</p>
                     <p>The <em>View</em> function Lorem ipsum dolor sit amet.</p>
                 </dd>
             </dl>
-            <pre class="line-numbers">
+            <div class="mx-md-3">
+                <pre class="line-numbers mt-0">
                     <code class="language-js">
-                        <!-- ADD CONTROLLER, LOGIC, & VIEW FUNCTIONS JS CODE -->
-                        function displayMessage() {
-    let msg = document.getElementById('message').value;
-    //alert(msg);
+                        //Controller
+function calculateLoan()
 
-    Swal.fire({
-        backdrop: false,
-        title: 'Loan Solutions',
-        text: msg
-    })
-}
+//Logic
+function createLoan(balance, term, rate)
+
+//View
+function displayLoan(loan)
                     </code>
-            </pre>
-            <!-- Detail on functions -->
-            <h4 class="mt-4">Functions</h4>
-            <!-- ADD FUNCTIONS DETAILS -->
-            <div id="displayMessage" class="mt-4">
+                </pre>
+            </div>
+
+            <h4 class="mt-5">Functions</h4>
+            <!-- TODO: ADD FUNCTIONS DETAILS -->
+            <div id="calculateLoan" class="pt-3 mt-3">
                 <dl class="row mb-0">
-                    <dt class="col-sm-3">displayMessage()</dt>
-                    <dd class="col-sm-9">
-                        <p>Store <span class="text-primary">inputs</span> using <em>getElementById</em> to retrive them
-                            from the document.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit expedita atque nostrum
-                            veritatis nobis nulla?</p>
-                        <p>Lorem ipsum dolor sit.</p>
+                    <dt class="col-md-3">calculateLoan</dt>
+                    <dd class="col-md-9">
+                        <p><!-- Add Decription --></p>
                     </dd>
                 </dl>
-                <pre class="line-numbers mt-0"><code class="language-js">
-                    function displayMessage() {
-    let msg = document.getElementById('message').value;
-    //alert(msg);
+                <div class="mx-md-3">
+                    <pre class="line-numbers mt-0">
+                        <code class="language-js">
+                            //Controller
+function calculateLoan() {
 
-    Swal.fire({
-        backdrop: false,
-        title: 'Loan Solutions',
-        text: msg
-    })
+    //get inputs from page
+    let balance = parseInt(document.getElementById('balanceValue').value);
+    let term = parseInt(document.getElementById('termValue').value);
+    let rate = parseInt(document.getElementById('rateValue').value);
+
+    //input validation
+    if (Number.isInteger(balance) == false) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Enter an integer for Loan Amount',
+        })
+        return;
+    }
+    if (Number.isInteger(term) == false) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Enter an integer for Term',
+        })
+        return;
+    }
+    if (Number.isInteger(rate) == false) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Enter an integer for Rate',
+        })
+        return;
+    }
+
+    //do calculations
+    let loan = createLoan(balance, term, rate);
+
+    //display results
+    displayLoan(loan);
 }
-                </code></pre>
+                        </code>
+                    </pre>
+                </div>
             </div>
-        </section>
+            <div id="createLoan" class="pt-3 mt-5">
+                <dl class="row mb-0">
+                    <dt class="col-md-3">createLoan</dt>
+                    <dd class="col-md-9">
+                        <p><!-- Add Description --></p>
+                    </dd>
+                </dl>
+                <div class="mx-md-3">
+                    <pre class="line-numbers mt-0">
+                        <code class="language-js">
+                            //Logic
+function createLoan(balance, term, rate) {
+
+    //calculate and set payments to loan
+
+    let totalMonthlyPayment = (balance) * (rate / 1200) / (1 - Math.pow((1 + rate / 1200), -term));
+
+    let remainingBalance = balance;
+    let totalInterest = 0;
+    let payments = [];
+
+    for (let month = 1; month &lt;= term; month++) {
+
+        //interest payment
+        let interestPayment = remainingBalance * (rate / 1200);
+        totalInterest += interestPayment;
+
+        //principal payment
+        let principalPayment = totalMonthlyPayment - interestPayment;
+
+        //remaining balance
+        remainingBalance -= principalPayment;
+
+        //round numbers
+        totalMonthlyPayment = Math.round(totalMonthlyPayment * 100) / 100
+        interestPayment = Math.round(interestPayment * 100) / 100;
+        totalInterest = Math.round(totalInterest * 100) / 100;
+        principalPayment = Math.round(principalPayment * 100) / 100;
+        remainingBalance = Math.round(remainingBalance * 100) / 100;
+
+        //create and add payment
+        let payment = {
+            month: month,
+            totalMonthlyPayment: totalMonthlyPayment,
+            interestPayment: interestPayment,
+            totalInterest: totalInterest,
+            principalPayment: principalPayment,
+            remainingBalance: remainingBalance,
+        }
+
+        //add payment
+        payments.push(payment);
+    }
+
+    //create loan object and return
+    let loan = {
+        balance: balance,
+        term: term,
+        rate: rate,
+        payments: payments,
+        totalInterest: totalInterest,
+        totalCost: balance + totalInterest
+    }
+
+    return loan;
+}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div id="displayLoan" class="pt-3 mt-5">
+                <dl class="row mb-0">
+                    <dt class="col-md-3">displayLoan</dt>
+                    <dd class="col-md-9">
+                        <p><!-- Add Description --></p>
+                    </dd>
+                </dl>
+                <div class="mx-md-3">
+                    <pre class="line-numbers mt-0">
+                        <code class="language-js">
+                            //View
+function displayLoan(loan) {
+
+    document.getElementById('monthlyPayments').textContent = `$${loan.payments[0].totalMonthlyPayment.toLocaleString("en-US")}`;
+    document.getElementById('totalPrincipal').textContent = `$${loan.balance.toLocaleString("en-US")}`;
+    document.getElementById('totalInterest').textContent = `$${loan.totalInterest.toLocaleString("en-US")}`;
+    document.getElementById('totalCost').textContent = `$${loan.totalCost.toLocaleString("en-US")}`;
+
+    //Reset payments table
+    const loanPaymentsTable = document.getElementById('loanTableBody');
+    loanPaymentsTable.innerHTML = '';
+
+    //Get template for table rows
+    let template = document.getElementById('loanTableBodyTemplate');
+
+    //Format each event and add to table 
+    for (let i = 0; i &lt; loan.payments.length; i++) {
+        const payment = loan.payments[i];
+        let tableRow = document.importNode(template.content, true);
+
+        tableRow.querySelector('[data-id="month"]').textContent = payment.month;
+        tableRow.querySelector('[data-id="payment"]').textContent = payment.totalMonthlyPayment.toLocaleString("en-US");
+        tableRow.querySelector('[data-id="principal"]').textContent = payment.principalPayment.toLocaleString("en-US");
+        tableRow.querySelector('[data-id="interest"]').textContent = payment.interestPayment.toLocaleString("en-US");
+        tableRow.querySelector('[data-id="totalInterest"]').textContent = payment.totalInterest.toLocaleString("en-US");
+        tableRow.querySelector('[data-id="balance"]').textContent = payment.remainingBalance.toLocaleString("en-US");
+
+        //add to page
+        loanPaymentsTable.appendChild(tableRow);
+    };
+
+    //display to page
+    document.getElementById('results').classList.remove('d-none');
+
+}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="container-fluid mt-3 footer-main">
+        <div class="row footer-bg-cta">
+            <div class="col">
+                <div class="container py-3 footer-cta text-center">
+                    <a href="https://github.com/brianley99/LoanSolutions" class="footer-message">Check out the full code!</a>
+                </div>
+            </div>
+        </div>
         <div class="container-xxl">
             <div class="row row-cols-1 row-cols-md-3 gy-3 align-items-center text-center text-light py-3">
                 <div class="col text-md-center">
