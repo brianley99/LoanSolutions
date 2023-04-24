@@ -62,13 +62,6 @@ function createLoan(balance, term, rate) {
         //remaining balance
         remainingBalance -= principalPayment;
 
-        //round numbers
-        totalMonthlyPayment = Math.round(totalMonthlyPayment * 100) / 100
-        interestPayment = Math.round(interestPayment * 100) / 100;
-        totalInterest = Math.round(totalInterest * 100) / 100;
-        principalPayment = Math.round(principalPayment * 100) / 100;
-        remainingBalance = Math.round(remainingBalance * 100) / 100;
-
         //create and add payment
         let payment = {
             month: month,
@@ -76,7 +69,7 @@ function createLoan(balance, term, rate) {
             interestPayment: interestPayment,
             totalInterest: totalInterest,
             principalPayment: principalPayment,
-            remainingBalance: remainingBalance,
+            remainingBalance: Math.abs(remainingBalance),
         }
 
         //add payment
@@ -99,10 +92,15 @@ function createLoan(balance, term, rate) {
 //View
 function displayLoan(loan) {
 
-    document.getElementById('monthlyPayments').textContent = `$${loan.payments[0].totalMonthlyPayment.toLocaleString("en-US")}`;
-    document.getElementById('totalPrincipal').textContent = `$${loan.balance.toLocaleString("en-US")}`;
-    document.getElementById('totalInterest').textContent = `$${loan.totalInterest.toLocaleString("en-US")}`;
-    document.getElementById('totalCost').textContent = `$${loan.totalCost.toLocaleString("en-US")}`;
+    let formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    })
+
+    document.getElementById('monthlyPayments').textContent = formatter.format(loan.payments[0].totalMonthlyPayment);
+    document.getElementById('totalPrincipal').textContent = formatter.format(loan.balance);
+    document.getElementById('totalInterest').textContent = formatter.format(loan.totalInterest);
+    document.getElementById('totalCost').textContent = formatter.format(loan.totalCost);
 
     //Reset payments table
     const loanPaymentsTable = document.getElementById('loanTableBody');
@@ -117,11 +115,11 @@ function displayLoan(loan) {
         let tableRow = document.importNode(template.content, true);
 
         tableRow.querySelector('[data-id="month"]').textContent = payment.month;
-        tableRow.querySelector('[data-id="payment"]').textContent = payment.totalMonthlyPayment.toLocaleString("en-US");
-        tableRow.querySelector('[data-id="principal"]').textContent = payment.principalPayment.toLocaleString("en-US");
-        tableRow.querySelector('[data-id="interest"]').textContent = payment.interestPayment.toLocaleString("en-US");
-        tableRow.querySelector('[data-id="totalInterest"]').textContent = payment.totalInterest.toLocaleString("en-US");
-        tableRow.querySelector('[data-id="balance"]').textContent = payment.remainingBalance.toLocaleString("en-US");
+        tableRow.querySelector('[data-id="payment"]').textContent = formatter.format(payment.totalMonthlyPayment);
+        tableRow.querySelector('[data-id="principal"]').textContent = formatter.format(payment.principalPayment);
+        tableRow.querySelector('[data-id="interest"]').textContent = formatter.format(payment.interestPayment);
+        tableRow.querySelector('[data-id="totalInterest"]').textContent = formatter.format(payment.totalInterest);
+        tableRow.querySelector('[data-id="balance"]').textContent = formatter.format(payment.remainingBalance);
 
         //add to page
         loanPaymentsTable.appendChild(tableRow);
@@ -131,3 +129,8 @@ function displayLoan(loan) {
     document.getElementById('results').classList.remove('d-none');
 
 }
+
+let formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+})
