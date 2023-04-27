@@ -126,7 +126,9 @@ function displayLoan(loan) {
     };
 
     //display to page
-    document.getElementById('results').classList.remove('d-none');
+    document.getElementById('totalResults').classList.remove('d-none');
+    document.getElementById('paymentsResult').classList.remove('d-none');
+
 
 }
 

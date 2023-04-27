@@ -62,7 +62,8 @@
                             <a class="nav-link" href="#code">The Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/brianley99/LoanSolutions" target="_blank">Repo</a>
+                            <a class="nav-link" href="https://github.com/brianley99/LoanSolutions"
+                                target="_blank">Repo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://bley-portfolio.netlify.app/" target="_blank">About</a>
@@ -87,7 +88,8 @@
                 <div class="col-lg-6">
                     <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
                         Coding Challange</h1>
-                    <p class="lead">Loan Solutions is a dynamic web page programmed with JavaScript that calculates loan payments based on a loan amount, term, and interest rate.</p>
+                    <p class="lead">Loan Solutions is a dynamic web page programmed with JavaScript that calculates loan
+                        payments based on a loan amount, term, and interest rate.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                         <a href="#app" class="btn btn-primary btn-lg px-4 me-md-2">Try it out!</a>
                         <a href="#code" class="btn btn-outline-secondary btn-lg px-4">View Code</a>
@@ -143,84 +145,105 @@
             </div>
         </div>
         <div class="section-divider"></div>
-        <div id="app" class="container px-4 py-5">
-            <h2 class="pb-2 border-bottom">The App</h2>
+        </div>
+        <div id="app" class="container px-0 px-md-4 py-5">
+            <h2 class="mx-4 mx-md-auto pb-2 border-bottom">The App</h2>
 
-            <form id="appForm" action="#" class="bg-primary-subtle rounded p-3 mt-4 mb-2">
-                <div class="row row-cols-1 g-3">
-                    <div class="col">
-                        <div class="form-floating">
-                            <input type="number" class="form-control" id="balanceValue" value="25000"
-                                placeholder="Loan Amount">
-                            <label for="balanceValue">Loan Amount</label>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="form-floating">
-                            <input type="number" class="form-control" id="termValue" value="60"
-                                placeholder="Term">
-                            <label for="termValue">Term</label>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="form-floating">
-                            <input type="number" class="form-control" id="rateValue" value="5"
-                                placeholder="Term">
-                            <label for="rateValue">Rate</label>
-                        </div>
-                    </div>
-                    <div class="col text-start">
-                        <button onclick="calculateLoan()" type="button" class="btn btn-primary">
-                            Calculate
-                        </button>
-                    </div>
-                </div>
-            </form>
-            <div id="results" class="d-none alert alert-success shadow rounded p-4">
-                <!-- Overall Result -->
-                <div id="totalResults" class="mt-3">
-                    <div class="card bg-success-subtle border-success shadow-sm p-2 pb-0 mb-0">
-                        <div class="card-body">
-                            <dl class="row row-cols-2 mb-0">
-                                <dt class="col text-muted">Monthly Payments</dt>
-                                <dd class="col text-end"><span id="monthlyPayments" class="fw-bold fs-1"></span></dd>
-                                <dt class="col text-muted">Total Principal</dt>
-                                <dd class="col text-end"><span id="totalPrincipal" class="fs-6"></span></dd>
-                                <dt class="col text-muted">Total Interest</dt>
-                                <dd class="col text-end"><span id="totalInterest" class="fs-6"></span></dd>
-                                <dt class="col text-muted">Total Cost</dt>
-                                <dd class="col text-end"><span id="totalCost" class="fs-6"></span></dd>
-                            </dl>
-                        </div>
+            <div class="row g-3 col-xxl-11 mx-auto mt-3">
+                <div class="col-md-4">
+                    <div class="card bg-primary-subtle p-3">
+                        <form id="appForm" action="#">
+                            <div class="row row-cols-1 g-3">
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="balanceValue" value="25000"
+                                            placeholder="Loan Amount">
+                                        <label for="balanceValue">Loan Amount</label>
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="termValue" value="60"
+                                            placeholder="Term">
+                                        <label for="termValue">Term</label>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="rateValue" value="5"
+                                            placeholder="Term">
+                                        <label for="rateValue">Rate</label>
+                                    </div>
+                                </div>
+                                <div class="col text-start">
+                                    <button onclick="calculateLoan()" type="button" class="btn btn-primary">
+                                        Calculate
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <!-- Payment Results -->
-                <div id="paymentsResult" class="table-responsive mt-3">
-                    <table class="table table-hover table-striped">
-                        <thead>
-                            <tr class="text-end">
-                                <th class="text-start">Month</th>
-                                <th>Payment</th>
-                                <th>Principal</th>
-                                <th>Interest</th>
-                                <th>Total Interest</th>
-                                <th>Balance</th>
-                            </tr>
-                        </thead>
-                        <tbody id="loanTableBody">
-                            <!-- JavaScript loan Table Body-->
-                        </tbody>
-                        <template id="loanTableBodyTemplate">
-                            <tr class="text-end">
-                                <td data-id="month" class="text-start"></td>
-                                <td data-id="payment"></td>
-                                <td data-id="principal"></td>
-                                <td data-id="interest"></td>
-                                <td data-id="totalInterest"></td>
-                                <td data-id="balance"></td>
-                            </tr>
-                        </template>
-                    </table>
+                <div class="col-md-8">
+                    <div class="card bg-light shadow p-3" style="height: 100%; min-height: 150px;">
+                        <div id="totalResults" class="d-none">
+                            <div class="row text-center">
+                                <div class="col">
+                                    <span class="lead">Monthly Payments</span>
+                                </div>
+                                <div class="col-12">
+                                    <span id="monthlyPayments" class="fs-1">$450.00</span>
+                                </div>
+                            </div>
+                            <table class="table table-sm table-borderless mb-0">
+                                <tbody>
+                                    <tr>
+                                        <th class="text-muted" scope="row">Total Principal</th>
+                                        <td id="totalPrincipal" class="text-end">$0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-muted" scope="row">Total Interest</th>
+                                        <td id="totalInterest" class="text-end">$0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-muted" scope="row">Total Cost</th>
+                                        <td id="totalCost" class="text-end">$0.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-secondary-subtle shadow p-3" style="height: 60vw; min-height: 400px; max-height: 75vh;">
+                        <div id="paymentsResult" class="d-none table-responsive">
+                            <table class="table table-hover table-striped mb-0">
+                                <thead>
+                                    <tr class="text-end">
+                                        <th class="text-start">Month</th>
+                                        <th>Payment</th>
+                                        <th>Principal</th>
+                                        <th>Interest</th>
+                                        <th>Total Interest</th>
+                                        <th>Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="loanTableBody">
+                                    <!-- JavaScript loan Table Body-->
+                                </tbody>
+                                <template id="loanTableBodyTemplate">
+                                    <tr class="text-end">
+                                        <td data-id="month" class="text-start"></td>
+                                        <td data-id="payment"></td>
+                                        <td data-id="principal"></td>
+                                        <td data-id="interest"></td>
+                                        <td data-id="totalInterest"></td>
+                                        <td data-id="balance"></td>
+                                    </tr>
+                                </template>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -439,7 +462,8 @@ function displayLoan(loan) {
         <div class="row footer-bg-cta">
             <div class="col">
                 <div class="container py-3 footer-cta text-center">
-                    <a href="https://github.com/brianley99/LoanSolutions" class="footer-message">Check out the full code!</a>
+                    <a href="https://github.com/brianley99/LoanSolutions" class="footer-message">Check out the full
+                        code!</a>
                 </div>
             </div>
         </div>
